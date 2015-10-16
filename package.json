@@ -1,0 +1,16 @@
+{
+  "name": "glintcms-starter-glintcms-demo",
+  "version": "1.0.0",
+  "description": "glintcms demo cleanup task",
+  "main": "index.js",
+  "scripts": {
+    "backup": "cp -rf ../glintcms-starter-glintcms/datastore .; cp -rf ../glintcms-starter-glintcms/public/files .",
+    "restore": "rm -rf ../glintcms-starter-glintcms/datastore && rm -rf ../glintcms-starter-glintcms/public/files && cp -rf datastore ../glintcms-starter-glintcms/  && cp -rf files ../glintcms-starter-glintcms/public/"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-schedule": "^0.2.9",
+    "shelljs": "^0.5.3"
+  }
+}
